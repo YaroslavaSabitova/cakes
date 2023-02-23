@@ -38,6 +38,10 @@ a {
   transition: .3s;
 }
 
+a:hover, a:active {
+  color: #F50049;
+}
+
 p {
   line-height: 20px;
   line-height: 2.7rem;
@@ -74,8 +78,36 @@ ul, ol {
   margin-right: 30%;
 }
 
-.navigation__item a.active {
-  color: #F50049;
+.navigation__link {
+  position: relative;
+  display: inline-block;
+  padding: .4rem 0;
+}
+
+.navigation__link:before, .navigation__link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: .1rem;
+  background-color: #f487a7;
+  opacity: 0;
+  transition: .3s;
+}
+
+.navigation__link::before {
+  top: 0;
+  transform: translateY(-10px);
+}
+
+.navigation__link::after {
+  bottom: 0;
+  transform: translateY(10px);
+}
+
+.navigation__link:hover::before, .navigation__link:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .phone {

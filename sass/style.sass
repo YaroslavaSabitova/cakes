@@ -8,6 +8,7 @@ $color-black: #000000
 
 $main-color: #2E2829
 $added-color: #F50049
+$added-color-light: #f487a7
 
 $color-background: #FBEBEA
 
@@ -51,6 +52,9 @@ a
     text-decoration: none
     text-transform: uppercase
     transition: .3s
+    &:hover,
+    &:active
+        color: $added-color
 
 p
     line-height: 20px
@@ -83,8 +87,30 @@ ul, ol
     align-items: center
     margin-right: 30%
 
-    &__item a.active
-        color: $added-color
+    &__link
+        position: relative
+        display: inline-block
+        padding: .4rem 0
+        &:before,
+        &:after
+            content: ""
+            position: absolute
+            left: 0
+            width: 100%
+            height: .1rem
+            background-color: $added-color-light
+            opacity: 0
+            transition: .3s
+        &::before
+            top: 0
+            transform: translateY(-10px)
+        &::after
+            bottom: 0
+            transform: translateY(10px)
+        &:hover::before,
+        &:hover::after
+            opacity: 1
+            transform: translateY(0)
 
 .phone
     width: 15%
