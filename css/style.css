@@ -1,0 +1,83 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 140rem;
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  background: #FBEBEA;
+  color: #2E2829;
+  position: relative;
+  padding-top: 6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  color: #2E2829;
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+p {
+  line-height: 20px;
+  line-height: 2.7rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.button {
+  font-size: 1.3rem;
+  line-height: 2.7rem;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 5%;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30%;
+}
+
+.navigation__item a.active {
+  color: #F50049;
+}
+
+.phone {
+  width: 15%;
+}

@@ -1,0 +1,90 @@
+// VARIABLES AND MIXINS
+
+$color-white: #ffffff
+$color-light-grey: #f4f4f4
+$color-grey: #a1a1a1
+$color-dark-grey: #575757
+$color-black: #000000
+
+$main-color: #2E2829
+$added-color: #F50049
+
+$color-background: #FBEBEA
+
+$box-shadow: 2px 2px 2px 0 $main-color
+
+// COMMON STYLES 
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    // font-size: 10px
+    // 10px : 16px (по умолчанию) * 100 = 62.5%
+    // для изменения размера шрифта для слабовидящих 
+    font-size: 62.5%
+
+body
+    min-width: 140rem
+    font-size: 2rem
+    font-family: 'Playfair Display', serif
+    background: $color-background
+    color: $main-color
+    position: relative
+    padding-top: 6rem
+
+img
+    max-width: 100%
+    height: auto
+    display: block
+
+h1, h2, h3, h4
+    margin: 0
+        
+a
+    color: $main-color
+    font-size: 1.3rem
+    font-family: 'Playfair Display', serif
+    line-height: 1.6rem
+    text-decoration: none
+    text-transform: uppercase
+    transition: .3s
+
+p
+    line-height: 20px
+    line-height: 2.7rem
+
+ul, ol
+    list-style: none
+
+.button
+    font-size: 1.3rem
+    line-height: 2.7rem
+
+.container
+    width: 120rem
+    margin: 0 auto
+
+// HEADER
+
+.main-nav
+    display: flex
+    align-items: center
+
+.logo
+    margin-right: 5%
+
+.navigation
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-right: 30%
+
+    &__item a.active
+        color: $added-color
+
+.phone
+    width: 15%
