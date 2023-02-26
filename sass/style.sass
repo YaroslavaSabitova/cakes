@@ -15,7 +15,8 @@ $added-color-light: #f487a7
 $btn-color: #ff5621
 $btn-color-light: #f7931e
 
-$box-shadow: 0px 2px 5px rgba($color-black, 0.25)
+$btn-shadow: 0px 2px 5px rgba($color-black, 0.25)
+$box-shadow: 0px 10px 13px rgba(163, 6, 60, 0.05)
 
 // COMMON STYLES 
 
@@ -65,13 +66,17 @@ p
 ul, ol
     list-style: none
 
+.container
+    width: 120rem
+    margin: 0 auto
+
 .button
     display: inline-block
     color: $color-white
     background: $added-color
     background-position: 1%
     background-size: 300% 300%
-    box-shadow: $box-shadow
+    box-shadow: $btn-shadow
     border-radius: 2.5rem
     padding: 1.2rem 6.2rem
     cursor: pointer
@@ -82,9 +87,10 @@ ul, ol
         background-position: 99%
         background-size: 300% 300%
 
-.container
-    width: 120rem
-    margin: 0 auto
+.title
+    font-weight: 700
+    font-size: 4rem
+    line-height: 6.6rem
 
 // HEADER
 
@@ -107,6 +113,7 @@ ul, ol
         position: relative
         display: inline-block
         padding: .4rem 0
+
         &:before,
         &:after
             content: ""
@@ -117,12 +124,15 @@ ul, ol
             background-color: $added-color-light
             opacity: 0
             transition: .3s
+
         &::before
             top: 0
             transform: translateY(-10px)
+
         &::after
             bottom: 0
             transform: translateY(10px)
+
         &:hover::before,
         &:hover::after
             opacity: 1
@@ -138,7 +148,7 @@ ul, ol
 
 .promo
     position: relative
-    margin-bottom: 23.5rem
+    margin-bottom: 25rem
 
     &__title
         font-weight: 700
@@ -172,9 +182,63 @@ ul, ol
         width: 50%
         display: flex
         align-items: center
-        font-size: 14px
-        line-height: 18px
+        font-size: 1.4rem
+        line-height: 1.8rem
 
     &__icon
         font-size: 5.5rem
         margin-right: 1rem
+
+// CATALOG
+
+.catalog
+    margin-bottom: 10rem
+
+    &__title
+        margin-bottom: 5.5rem
+
+    &__cards
+        display: grid
+        grid-template-columns: 55% 45%
+        grid-template-rows: 50% 50%
+        gap: 4rem
+
+    &__item
+        background-color: $color-white
+        padding: 3rem
+        box-shadow: $box-shadow
+        position: relative
+
+        &:nth-child(1)
+            grid-column: 1 / 2
+            grid-row: 1 / -1
+
+        &:nth-child(2)
+            grid-column: 2 / 3
+            grid-row: 1 / 2
+
+        &:nth-child(3)
+            grid-column: 2 / 3
+            grid-row: 2 / 3
+
+    &__info,
+    &__link
+        position: absolute
+
+    &__link
+        right: 4rem
+        bottom: 4rem
+        font-size: 1.8rem
+        line-height: 2.4rem
+        text-transform: none
+
+    &__subtitle
+        font-weight: 700
+        font-size: 24px
+        line-height: 32px
+
+    &__cake
+        margin: 4rem auto 0
+
+.catalog__item:nth-of-type(1) img:nth-of-type(1)
+    margin-top: 8rem
