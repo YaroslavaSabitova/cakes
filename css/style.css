@@ -51,15 +51,16 @@ ul, ol {
 }
 
 .button {
+  display: inline-block;
   color: #ffffff;
   background: #F50049;
   background-position: 1%;
   background-size: 300% 300%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   border-radius: 2.5rem;
-  padding: 1.7rem 6.2rem;
+  padding: 1.2rem 6.2rem;
   cursor: pointer;
-  transition: all .7s ease-out;
+  transition: all 1s ease-out;
 }
 
 .button:hover {
@@ -131,6 +132,7 @@ ul, ol {
 
 .promo {
   position: relative;
+  margin-bottom: 23.5rem;
 }
 
 .promo__title {
@@ -158,4 +160,23 @@ ul, ol {
   font-weight: 700;
   line-height: 2.7rem;
   margin-bottom: 10rem;
+}
+
+.promo__features {
+  width: 42%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.promo__icon {
+  font-size: 5.5rem;
+  margin-right: 1rem;
 }

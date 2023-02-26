@@ -1,5 +1,7 @@
 // VARIABLES AND MIXINS
 
+$color-background: #FBEBEA
+
 $color-white: #ffffff
 $color-light-grey: #f4f4f4
 $color-grey: #a1a1a1
@@ -10,7 +12,8 @@ $main-color: #2E2829
 $added-color: #F50049
 $added-color-light: #f487a7
 
-$color-background: #FBEBEA
+$btn-color: #ff5621
+$btn-color-light: #f7931e
 
 $box-shadow: 0px 2px 5px rgba($color-black, 0.25)
 
@@ -63,18 +66,19 @@ ul, ol
     list-style: none
 
 .button
+    display: inline-block
     color: $color-white
     background: $added-color
     background-position: 1%
     background-size: 300% 300%
     box-shadow: $box-shadow
     border-radius: 2.5rem
-    padding: 1.7rem 6.2rem
+    padding: 1.2rem 6.2rem
     cursor: pointer
-    transition: all .7s ease-out
+    transition: all 1s ease-out
     &:hover
         color: $color-white
-        background: linear-gradient(270deg,#f7931e,#ff5621,transparent,transparent)
+        background: linear-gradient(270deg, $btn-color-light,$btn-color, transparent, transparent)
         background-position: 99%
         background-size: 300% 300%
 
@@ -134,6 +138,7 @@ ul, ol
 
 .promo
     position: relative
+    margin-bottom: 23.5rem
 
     &__title
         font-weight: 700
@@ -159,5 +164,17 @@ ul, ol
         margin-bottom: 10rem
 
     &__features
-    &__nature
-    &__delivery
+        width: 42%
+        display: flex
+        justify-content: space-between
+
+    &__item
+        width: 50%
+        display: flex
+        align-items: center
+        font-size: 14px
+        line-height: 18px
+
+    &__icon
+        font-size: 5.5rem
+        margin-right: 1rem
