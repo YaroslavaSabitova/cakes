@@ -15,7 +15,7 @@ body {
   background: #FBEBEA;
   color: #2E2829;
   position: relative;
-  padding-top: 6rem;
+  padding-top: 22rem;
 }
 
 img {
@@ -81,10 +81,20 @@ ul, ol {
   line-height: 6.6rem;
 }
 
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #FBEBEA;
+  box-shadow: 0px 10px 13px rgba(163, 6, 60, 0.05);
+  padding: 2.2rem 0 2.1rem;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
-  margin-bottom: 15rem;
 }
 
 .logo {
@@ -260,7 +270,7 @@ ul, ol {
   z-index: 1;
   font-size: 1.5rem;
   line-height: 2.4rem;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2rem;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 2.5rem;
@@ -271,7 +281,7 @@ ul, ol {
   display: none;
   position: absolute;
   top: 50%;
-  right: 2.5rem;
+  right: 1.7rem;
   transition: all .3s ease;
   transform: translateY(-50%);
 }
@@ -303,5 +313,5 @@ ul, ol {
 .catalog__btn:hover::before {
   opacity: 1;
   width: 1rem;
-  left: 11.2rem;
+  left: 11.4rem;
 }

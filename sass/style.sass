@@ -39,7 +39,7 @@ body
     background: $color-background
     color: $main-color
     position: relative
-    padding-top: 6rem
+    padding-top: 22rem
 
 img
     max-width: 100%
@@ -95,10 +95,19 @@ ul, ol
 
 // HEADER
 
+.main-header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    background-color: $color-background
+    box-shadow: $box-shadow
+    padding: 2.2rem 0 2.1rem
+
 .main-nav
     display: flex
     align-items: center
-    margin-bottom: 15rem
 
 .logo
     margin-right: 5%
@@ -253,7 +262,7 @@ ul, ol
     z-index: 1
     font-size: 1.5rem
     line-height: 2.4rem
-    padding: 1.5rem 2.5rem
+    padding: 1rem 2rem
     background: transparent
     border: 1px solid transparent
     border-radius: 2.5rem
@@ -262,7 +271,7 @@ ul, ol
         display: none
         position: absolute
         top: 50%
-        right: 2.5rem
+        right: 1.7rem
         transition: all .3s ease
         transform: translateY(-50%)
     &:hover > &__svg
@@ -286,5 +295,4 @@ ul, ol
     &:hover::before
         opacity: 1
         width: 1rem
-        left: 11.2rem
-
+        left: 11.4rem
