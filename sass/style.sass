@@ -40,11 +40,11 @@ body
     color: $main-color
     position: relative
     padding-top: 22rem
-    background-image: url(../img/strawberry-cut.png), 
+    background-image: url(../img/strawberry-cut.png),
     url(../img/berry.png), 
     url(../img/strawberry.png)
     background-repeat: no-repeat
-    background-position: 61.5rem 12.5rem, 
+    background-position: 61.5rem 12.5rem,
     56.5rem 53rem, 
     52rem 84rem
     background-size: 12rem, 8rem, 17.5rem
@@ -192,7 +192,7 @@ ul, ol
         margin-bottom: 10rem
 
     &__features
-        width: 42%
+        width: 45%
         display: flex
         justify-content: space-between
 
@@ -200,8 +200,8 @@ ul, ol
         width: 50%
         display: flex
         align-items: center
-        font-size: 1.4rem
-        line-height: 1.8rem
+        font-size: 2rem
+        line-height: 2.7rem
 
     &__icon
         font-size: 5.5rem
@@ -308,7 +308,7 @@ ul, ol
 // REVIEWS
 
 .reviews
-    margin-bottom: 11.5rem
+    margin-bottom: 10rem
 
     &__title
         text-align: center
@@ -436,3 +436,50 @@ ul, ol
 .active
     background-color: $color-white
     pointer-events: none
+
+// ADVANTAGES
+
+.advantages
+    margin-bottom: 10rem
+    position: relative
+
+    &__title
+        margin-bottom: 2.5rem
+        text-align: center
+
+    &__subtitle
+        font-style: italic
+        font-size: 3rem
+        line-height: rem
+        text-align: center
+
+    &__part
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &_up
+            top: 10rem
+            left: 0
+            background-image: url(../img/strawberry1.png)
+            background-repeat: no-repeat
+            background-position: 90rem 2rem
+            background-size: 18rem
+        &_down
+            top: 60rem
+            right: 0
+
+    &__info
+        width: 40%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__icon
+        font-size: 6rem
+        margin-right: 3rem
+
+.info__subtitle
+    font-weight: 700
+    line-height: 2.7rem
+    margin-bottom: 1.5rem

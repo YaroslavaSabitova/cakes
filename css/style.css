@@ -183,7 +183,7 @@ ul, ol {
 }
 
 .promo__features {
-  width: 42%;
+  width: 45%;
   display: flex;
   justify-content: space-between;
 }
@@ -192,8 +192,8 @@ ul, ol {
   width: 50%;
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 2rem;
+  line-height: 2.7rem;
 }
 
 .promo__icon {
@@ -321,7 +321,7 @@ ul, ol {
 }
 
 .reviews {
-  margin-bottom: 11.5rem;
+  margin-bottom: 10rem;
 }
 
 .reviews__title {
@@ -478,4 +478,60 @@ ul, ol {
 .active {
   background-color: #ffffff;
   pointer-events: none;
+}
+
+.advantages {
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.advantages__title {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.advantages__subtitle {
+  font-style: italic;
+  font-size: 3rem;
+  line-height: rem;
+  text-align: center;
+}
+
+.advantages__part {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantages__part_up {
+  top: 10rem;
+  left: 0;
+  background-image: url(../img/strawberry1.png);
+  background-repeat: no-repeat;
+  background-position: 90rem 2rem;
+  background-size: 18rem;
+}
+
+.advantages__part_down {
+  top: 60rem;
+  right: 0;
+}
+
+.advantages__info {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantages__icon {
+  font-size: 6rem;
+  margin-right: 3rem;
+}
+
+.info__subtitle {
+  font-weight: 700;
+  line-height: 2.7rem;
+  margin-bottom: 1.5rem;
 }
