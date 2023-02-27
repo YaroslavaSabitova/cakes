@@ -17,6 +17,7 @@ $btn-color-light: #f7931e
 
 $btn-shadow: 0px 2px 5px rgba($color-black, 0.25)
 $box-shadow: 0px 10px 13px rgba(163, 6, 60, 0.05)
+$inner-shadow: inset 0 -30px 40px -30px $added-color-light
 
 // COMMON STYLES 
 
@@ -204,10 +205,14 @@ ul, ol
         gap: 4rem
 
     &__item
-        background-color: $color-white
-        padding: 3rem
-        box-shadow: $box-shadow
         position: relative
+        padding: 3rem
+        background-color: $color-white
+        box-shadow: $box-shadow
+        transition: all .3s ease
+
+        &:hover
+            box-shadow: $btn-shadow
 
         &:nth-child(1)
             grid-column: 1 / 2
@@ -221,24 +226,65 @@ ul, ol
             grid-column: 2 / 3
             grid-row: 2 / 3
 
+    &__subtitle
+        font-size: 24px
+        font-weight: 700
+        line-height: 32px
+
     &__info,
     &__link
         position: absolute
 
     &__link
-        right: 4rem
-        bottom: 4rem
+        right: 3rem
+        bottom: 2.5rem
         font-size: 1.8rem
         line-height: 2.4rem
-        text-transform: none
 
-    &__subtitle
-        font-weight: 700
-        font-size: 24px
-        line-height: 32px
-
-    &__cake
-        margin: 4rem auto 0
+    img
+        margin: 2rem auto 0
 
 .catalog__item:nth-of-type(1) img:nth-of-type(1)
-    margin-top: 8rem
+    margin-top: 7rem
+
+.catalog__btn
+    display: inline-block
+    position: relative
+    z-index: 1
+    font-size: 1.5rem
+    line-height: 2.4rem
+    padding: 1.5rem 2.5rem
+    background: transparent
+    border: 1px solid transparent
+    border-radius: 2.5rem
+    transition: all .3s ease
+    svg
+        display: none
+        position: absolute
+        top: 50%
+        right: 2.5rem
+        transition: all .3s ease
+        transform: translateY(-50%)
+    &:hover > &__svg
+        display: initial
+    &:hover
+        padding-right: 4.5rem
+        box-shadow: $inner-shadow
+        border: 1px solid $added-color-light
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 50%
+        left: 0
+        opacity: 0
+        width: 7rem
+        height: .2rem
+        background-color: $added-color
+        transform: translateY(-50%)
+        transition: all .3s ease
+    &:hover::before
+        opacity: 1
+        width: 1rem
+        left: 11.2rem
+
