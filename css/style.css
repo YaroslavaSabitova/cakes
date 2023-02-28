@@ -136,6 +136,10 @@ section {
   position: absolute;
 }
 
+.center {
+  text-align: center;
+}
+
 .main-header {
   position: fixed;
   top: 0;
@@ -154,6 +158,7 @@ section {
 
 .logo {
   margin-right: 5%;
+  cursor: pointer;
 }
 
 .navigation {
@@ -384,7 +389,7 @@ section {
 }
 
 .reviews__start {
-  top: -10rem;
+  top: -18rem;
 }
 
 .reviews__title {
@@ -551,6 +556,10 @@ section {
   top: -8rem;
 }
 
+.advantages__end {
+  top: 42rem;
+}
+
 .advantages__title {
   margin-bottom: 2.5rem;
   text-align: center;
@@ -602,7 +611,7 @@ section {
 }
 
 .contacts {
-  margin-bottom: 12rem;
+  margin-bottom: 8rem;
 }
 
 .contacts__start {
@@ -617,10 +626,6 @@ section {
 
 .contacts__title, .contacts__item {
   margin-bottom: 3rem;
-}
-
-.contacts__button {
-  text-align: center;
 }
 
 .social__list {
@@ -644,5 +649,28 @@ section {
 }
 
 .main-footer {
-  background-color: #D0D0D0;
+  background-color: #E8E8E8;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+.main-footer__navigation {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer__navigation a::before,
+.main-footer__navigation a::after {
+  display: none;
+}
+
+.main-footer .center {
+  padding: 1.7rem;
+  color: #D0D0D0;
 }

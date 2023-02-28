@@ -4,8 +4,8 @@ $color-background: #FBEBEA
 
 $color-white: #ffffff
 $color-light-grey: #f4f4f4
-$color-grey: #D0D0D0
-$color-dark-grey: #575757
+$color-grey: #E8E8E8
+$color-dark-grey: #D0D0D0
 $color-black: #000000
 
 $main-color: #2E2829
@@ -145,6 +145,9 @@ section
 .start
     position: absolute
 
+.center
+    text-align: center
+
 // HEADER
 
 .main-header
@@ -163,6 +166,7 @@ section
 
 .logo
     margin-right: 5%
+    cursor: pointer
 
 .navigation
     width: 100%
@@ -366,7 +370,7 @@ section
     margin-bottom: 10rem
 
     &__start
-        top: -10rem
+        top: -18rem
 
     &__title
         text-align: center
@@ -506,6 +510,9 @@ section
     &__start
         top: -8rem
 
+    &__end
+        top: 42rem
+
     &__title
         margin-bottom: 2.5rem
         text-align: center
@@ -551,7 +558,7 @@ section
 // CONTACTS
 
 .contacts
-    margin-bottom: 12rem
+    margin-bottom: 8rem
 
     &__start
         top: -7rem
@@ -564,9 +571,6 @@ section
     &__title,
     &__item
         margin-bottom: 3rem
-
-    &__button
-        text-align: center
 
 .social
 
@@ -591,3 +595,22 @@ section
 
 .main-footer
     background-color: $color-grey
+    
+.main-footer .container
+    display: flex
+    justify-content: space-between
+    padding: 5rem 0
+    border-bottom: 1px solid $color-dark-grey
+
+.main-footer__navigation
+    width: 60%
+    display: flex
+    justify-content: space-between
+
+    a::before,
+    a::after
+        display: none
+
+.main-footer .center
+    padding: 1.7rem
+    color: $color-dark-grey
