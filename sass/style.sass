@@ -4,7 +4,7 @@ $color-background: #FBEBEA
 
 $color-white: #ffffff
 $color-light-grey: #f4f4f4
-$color-grey: #a1a1a1
+$color-grey: #D0D0D0
 $color-dark-grey: #575757
 $color-black: #000000
 
@@ -31,6 +31,7 @@ html
     // 10px : 16px (по умолчанию) * 100 = 62.5%
     // для изменения размера шрифта для слабовидящих 
     font-size: 62.5%
+    scroll-behavior: smooth
 
 body
     min-width: 140rem
@@ -138,6 +139,12 @@ i
     65%
         transform: rotate(25deg)
 
+section
+    position: relative
+
+.start
+    position: absolute
+
 // HEADER
 
 .main-header
@@ -203,8 +210,10 @@ i
 // PROMO
 
 .promo
-    position: relative
     margin-bottom: 25rem
+
+    &__start
+        top: -17rem
 
     &__title
         font-weight: 700
@@ -249,6 +258,9 @@ i
 
 .catalog
     margin-bottom: 12rem
+
+    &__start
+        top: -8rem
 
     &__title
         margin-bottom: 5.5rem
@@ -342,7 +354,7 @@ i
         background-color: $added-color
         transform: translateY(-50%)
         transition: all .3s ease
-        
+
     &:hover::before
         opacity: 1
         width: 1rem
@@ -352,6 +364,9 @@ i
 
 .reviews
     margin-bottom: 10rem
+
+    &__start
+        top: -10rem
 
     &__title
         text-align: center
@@ -487,7 +502,9 @@ i
 
 .advantages
     margin-bottom: 100rem
-    position: relative
+
+    &__start
+        top: -8rem
 
     &__title
         margin-bottom: 2.5rem
@@ -512,7 +529,7 @@ i
             background-repeat: no-repeat
             background-position: 90rem 2rem
             background-size: 18rem
-            
+
         &_down
             top: 60rem
             right: 0
@@ -536,15 +553,17 @@ i
 .contacts
     margin-bottom: 12rem
 
+    &__start
+        top: -7rem
+
     &__flex
         display: flex
         justify-content: space-between
         align-items: center
-        margin-bottom: 1rem
 
     &__title,
     &__item
-        margin-bottom: 4rem
+        margin-bottom: 3rem
 
     &__button
         text-align: center
@@ -568,4 +587,7 @@ i
         i
             font-size: 3rem
 
+// FOOTER
 
+.main-footer
+    background-color: $color-grey

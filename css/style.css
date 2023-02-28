@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -127,6 +128,14 @@ i {
   }
 }
 
+section {
+  position: relative;
+}
+
+.start {
+  position: absolute;
+}
+
 .main-header {
   position: fixed;
   top: 0;
@@ -194,8 +203,11 @@ i {
 }
 
 .promo {
-  position: relative;
   margin-bottom: 25rem;
+}
+
+.promo__start {
+  top: -17rem;
 }
 
 .promo__title {
@@ -246,6 +258,10 @@ i {
 
 .catalog {
   margin-bottom: 12rem;
+}
+
+.catalog__start {
+  top: -8rem;
 }
 
 .catalog__title {
@@ -365,6 +381,10 @@ i {
 
 .reviews {
   margin-bottom: 10rem;
+}
+
+.reviews__start {
+  top: -10rem;
 }
 
 .reviews__title {
@@ -525,7 +545,10 @@ i {
 
 .advantages {
   margin-bottom: 100rem;
-  position: relative;
+}
+
+.advantages__start {
+  top: -8rem;
 }
 
 .advantages__title {
@@ -582,15 +605,18 @@ i {
   margin-bottom: 12rem;
 }
 
+.contacts__start {
+  top: -7rem;
+}
+
 .contacts__flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .contacts__title, .contacts__item {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .contacts__button {
@@ -615,4 +641,8 @@ i {
 
 .social__item i {
   font-size: 3rem;
+}
+
+.main-footer {
+  background-color: #D0D0D0;
 }
