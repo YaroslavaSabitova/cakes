@@ -57,23 +57,28 @@ img
 h1, h2, h3, h4
     margin: 0
 
-a
+a, address
     color: $main-color
     font-size: 1.3rem
     line-height: 1.6rem
     text-decoration: none
     text-transform: uppercase
     transition: .3s
+
     &:hover,
     &:active
         color: $added-color
 
-p
-    line-height: 20px
+p, .info__text
+    font-size: 2rem
     line-height: 2.7rem
+    text-transform: none
 
 ul, ol
     list-style: none
+
+i
+    font-size: 5.5rem
 
 .container
     width: 120rem
@@ -86,20 +91,52 @@ ul, ol
     background-position: 1%
     background-size: 300% 300%
     box-shadow: $btn-shadow
+    font-size: 2rem
+    font-weight: 700
+    text-transform: uppercase
+    border: none
     border-radius: 2.5rem
-    padding: 1.2rem 6.2rem
+    padding: 1.3rem 6.2rem
     cursor: pointer
     transition: all 1s ease-out
+    animation: 2s infinite increasing
+    backface-visibility: hidden
+
     &:hover
         color: $color-white
         background: linear-gradient(270deg, $btn-color-light,$btn-color, transparent, transparent)
         background-position: 99%
         background-size: 300% 300%
 
+@keyframes increasing
+    0%, 100%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.1)
+
 .title
     font-weight: 700
     font-size: 4rem
     line-height: 6.6rem
+
+.animated-icon
+    trnasition: .3s
+
+    &:hover
+        animation: .5s ease shaking
+        backface-visibility: hidden
+
+@keyframes shaking
+    0%,
+    100%
+        transform: rotate(0)
+
+    25%
+        transform: rotate(-25deg)
+
+    65%
+        transform: rotate(25deg)
 
 // HEADER
 
@@ -131,6 +168,7 @@ ul, ol
         position: relative
         display: inline-block
         padding: .4rem 0
+        text-transform: uppercase
 
         &:before,
         &:after
@@ -275,6 +313,7 @@ ul, ol
     border: 1px solid transparent
     border-radius: 2.5rem
     transition: all .3s ease
+
     svg
         display: none
         position: absolute
@@ -282,12 +321,15 @@ ul, ol
         right: 1.7rem
         transition: all .3s ease
         transform: translateY(-50%)
+
     &:hover > &__svg
         display: initial
+
     &:hover
         padding-right: 4.5rem
         box-shadow: $inner-shadow
         border: 1px solid $added-color-light
+
     &::before
         content: ""
         display: block
@@ -300,6 +342,7 @@ ul, ol
         background-color: $added-color
         transform: translateY(-50%)
         transition: all .3s ease
+        
     &:hover::before
         opacity: 1
         width: 1rem
@@ -397,12 +440,15 @@ ul, ol
     display: flex
     align-items: center
     justify-content: space-evenly
+
     img
         width: 20%
         height: auto
         border-radius: 50%
+
     &:nth-of-type(4) img:nth-of-type(1)
         border-radius: 33%
+
     &__info
         width: 50%
 
@@ -440,7 +486,7 @@ ul, ol
 // ADVANTAGES
 
 .advantages
-    margin-bottom: 10rem
+    margin-bottom: 100rem
     position: relative
 
     &__title
@@ -458,6 +504,7 @@ ul, ol
         display: flex
         align-items: center
         justify-content: space-between
+
         &_up
             top: 10rem
             left: 0
@@ -465,6 +512,7 @@ ul, ol
             background-repeat: no-repeat
             background-position: 90rem 2rem
             background-size: 18rem
+            
         &_down
             top: 60rem
             right: 0
@@ -476,10 +524,48 @@ ul, ol
         justify-content: space-between
 
     &__icon
-        font-size: 6rem
         margin-right: 3rem
 
 .info__subtitle
     font-weight: 700
     line-height: 2.7rem
-    margin-bottom: 1.5rem
+    margin-bottom: 2rem
+
+// CONTACTS
+
+.contacts
+    margin-bottom: 12rem
+
+    &__flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 1rem
+
+    &__title,
+    &__item
+        margin-bottom: 4rem
+
+    &__button
+        text-align: center
+
+.social
+
+    &__list
+        width: 57%
+        display: flex
+        justify-content: space-between
+
+    &__item
+        display: flex
+        width: 6.3rem
+        height: 6.3rem
+        background-color: $color-white
+        border-radius: 50%
+        align-items: center
+        justify-content: center
+
+        i
+            font-size: 3rem
+
+

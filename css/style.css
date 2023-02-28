@@ -32,7 +32,7 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-a {
+a, address {
   color: #2E2829;
   font-size: 1.3rem;
   line-height: 1.6rem;
@@ -41,17 +41,22 @@ a {
   transition: .3s;
 }
 
-a:hover, a:active {
+a:hover, a:active, address:hover, address:active {
   color: #F50049;
 }
 
-p {
-  line-height: 20px;
+p, .info__text {
+  font-size: 2rem;
   line-height: 2.7rem;
+  text-transform: none;
 }
 
 ul, ol {
   list-style: none;
+}
+
+i {
+  font-size: 5.5rem;
 }
 
 .container {
@@ -66,10 +71,16 @@ ul, ol {
   background-position: 1%;
   background-size: 300% 300%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
   border-radius: 2.5rem;
-  padding: 1.2rem 6.2rem;
+  padding: 1.3rem 6.2rem;
   cursor: pointer;
   transition: all 1s ease-out;
+  animation: 2s infinite increasing;
+  backface-visibility: hidden;
 }
 
 .button:hover {
@@ -79,10 +90,41 @@ ul, ol {
   background-size: 300% 300%;
 }
 
+@keyframes increasing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .title {
   font-weight: 700;
   font-size: 4rem;
   line-height: 6.6rem;
+}
+
+.animated-icon {
+  trnasition: .3s;
+}
+
+.animated-icon:hover {
+  animation: .5s ease shaking;
+  backface-visibility: hidden;
+}
+
+@keyframes shaking {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  65% {
+    transform: rotate(25deg);
+  }
 }
 
 .main-header {
@@ -117,6 +159,7 @@ ul, ol {
   position: relative;
   display: inline-block;
   padding: .4rem 0;
+  text-transform: uppercase;
 }
 
 .navigation__link:before, .navigation__link:after {
@@ -481,7 +524,7 @@ ul, ol {
 }
 
 .advantages {
-  margin-bottom: 10rem;
+  margin-bottom: 100rem;
   position: relative;
 }
 
@@ -526,12 +569,50 @@ ul, ol {
 }
 
 .advantages__icon {
-  font-size: 6rem;
   margin-right: 3rem;
 }
 
 .info__subtitle {
   font-weight: 700;
   line-height: 2.7rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contacts {
+  margin-bottom: 12rem;
+}
+
+.contacts__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contacts__title, .contacts__item {
+  margin-bottom: 4rem;
+}
+
+.contacts__button {
+  text-align: center;
+}
+
+.social__list {
+  width: 57%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  display: flex;
+  width: 6.3rem;
+  height: 6.3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__item i {
+  font-size: 3rem;
 }
