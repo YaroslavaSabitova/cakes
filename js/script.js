@@ -1,6 +1,4 @@
-'use strict';
-
-const SLIDE_WIDTH = 960;
+const SLIDE_WIDTH = 100;
 
 const navItems = document.querySelectorAll('.slider__navigation-link');
 const slides = document.querySelector('.slides');
@@ -11,7 +9,7 @@ const buttonNext = document.querySelector('.slider__button_next');
 let currentSlide = '1';
 
 const setSlideActive = () => {
-  slides.style.transform = `translate3d(${- (currentSlide - 1) * SLIDE_WIDTH}px, 0, 0)`;
+  slides.style.transform = `translate3d(${- (currentSlide - 1) * SLIDE_WIDTH}%, 0, 0)`;
 };
 
 const setActiveNavItem = () => {

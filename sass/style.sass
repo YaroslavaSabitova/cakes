@@ -34,24 +34,26 @@ html
     scroll-behavior: smooth
 
 body
-    min-width: 140rem
+    // min-width: 140rem
+    // min-height: 100vh
     font-size: 2rem
     font-family: "Playfair Display", serif
     background: $color-background
     color: $main-color
     position: relative
-    padding-top: 22rem
     background-image: url(../img/strawberry-cut.png),
     url(../img/berry.png), 
     url(../img/strawberry.png)
     background-repeat: no-repeat
-    background-position: 61.5rem 12.5rem,
-    56.5rem 53rem, 
-    52rem 84rem
+    background-position: 56.5rem 12.5rem, 54.5rem 53rem, 52rem 83rem
+    // background-position: 45% 20%, 43% 80%, 45% 140%
     background-size: 12rem, 8rem, 17.5rem
 
+main
+    overflow: hidden
+    padding-top: 20rem
+
 img
-    max-width: 100%
     height: auto
     display: block
 
@@ -82,7 +84,7 @@ i
     font-size: 5.5rem
 
 .container
-    width: 120rem
+    width: 114rem
     margin: 0 auto
 
 .button
@@ -173,7 +175,7 @@ section
     display: flex
     justify-content: space-between
     align-items: center
-    margin-right: 30%
+    margin-right: 20%
 
     &__link
         position: relative
@@ -208,6 +210,7 @@ section
 .phone
     width: 17%
     font-weight: 700
+    text-align: right
 
 // MAIN
 
@@ -235,7 +238,7 @@ section
     &__cake
         position: absolute
         top: -12rem
-        left: 58.5rem
+        left: 60.5rem
 
     &__button
         font-weight: 700
@@ -261,7 +264,7 @@ section
 // CATALOG
 
 .catalog
-    margin-bottom: 12rem
+    margin-bottom: 8rem
 
     &__start
         top: -8rem
@@ -273,7 +276,7 @@ section
         display: grid
         grid-template-columns: 55% 45%
         grid-template-rows: 50% 50%
-        gap: 4rem
+        gap: 2rem
 
     &__item
         position: relative
@@ -313,10 +316,7 @@ section
         line-height: 2.4rem
 
     img
-        margin: 2rem auto 0
-
-.catalog__item:nth-of-type(1) img:nth-of-type(1)
-    margin-top: 7rem
+        margin: 0 auto
 
 .catalog__btn
     display: inline-block
@@ -367,7 +367,7 @@ section
 // REVIEWS
 
 .reviews
-    margin-bottom: 10rem
+    margin-bottom: 8rem
 
     &__start
         top: -18rem
@@ -399,7 +399,7 @@ section
 
 .slider
     position: relative
-    width: 96rem
+    width: 100%
     height: 33rem
     overflow: hidden
     margin: 0 auto
@@ -454,7 +454,7 @@ section
     transition: transform 300ms ease
 
 .slide
-    width: 96rem
+    width: 100%
     flex: none
     display: flex
     align-items: center
@@ -594,8 +594,9 @@ section
 // FOOTER
 
 .main-footer
+    width: 100%
     background-color: $color-grey
-    
+
 .main-footer .container
     display: flex
     justify-content: space-between
@@ -614,3 +615,157 @@ section
 .main-footer .center
     padding: 1.7rem
     color: $color-dark-grey
+
+// MEDIA QUERIES
+
+@media (max-width: 1199px)
+
+    .container
+        width: 960px
+
+    body
+        background-position: 53.5rem 12.5rem, 52.5rem 53rem, 60rem 83rem
+
+    html
+        font-size: 59%
+
+    .promo
+        margin-bottom: 15rem
+        &__cake
+            width: 62rem
+        &__features
+            width: 63%
+
+    .reviews
+        margin-bottom: 8rem
+
+    .advantages
+        margin-bottom: 123rem
+
+        &__part_up
+            top: 13rem
+            left: 1rem
+            background-position: 70rem 5rem
+
+        &__part_down
+            top: 77rem
+            right: -75px
+
+    .contacts
+        margin-bottom: 7rem
+        &__flex
+            margin-bottom: 2rem
+
+    .main-footer
+        // min-width: 1199px
+
+@media (max-width: 991px)
+
+    .container
+        width: 750px
+
+    body
+        background-size: 10rem, 6rem, 15rem
+        background-position: 54.5rem 12.5rem, 55.5rem 53rem, 60rem 76rem
+
+    html
+        font-size: 57%
+
+    .title
+        text-align: center
+
+    .promo
+        padding-left: 67px
+
+        &__cake
+            width: 50rem
+            left: 61rem
+
+    .navigation
+        margin-right: unset
+
+        &__item
+            flex-grow: 1
+
+    .phone
+        width: 16%
+
+    .logo
+        margin-right: unset
+
+        img
+            max-width: 70%
+
+    .promo
+        margin-bottom: 10rem
+
+        &__features
+            width: 100%
+
+    .catalog__cards
+        gap: 1rem
+
+    .catalog img
+        margin: 4rem auto 2rem
+
+    .catalog__item:nth-of-type(1) img:nth-of-type(1)
+        width: 300px
+        margin-top: 16rem
+
+    .reviews
+        margin-bottom: 6rem
+
+    .advantages
+        margin-bottom: 87rem
+
+        &__part
+            justify-content: space-around
+
+        img
+            width: 400px
+
+        &__part_up
+            background-position: 60rem 2rem
+            background-size: 122px
+
+        &__part_down
+            top: 55rem
+
+    iframe
+        width: 400px
+
+    .main-footer__navigation
+        width: 80%
+        text-align: right
+
+// Горизонтальный тлф
+
+@media (max-width: 767px)
+
+    .container
+        width: 540px
+
+    html
+        font-size: 45%
+
+    .phone
+        width: 10%
+
+    .catalog img
+        margin: 8rem auto 2rem
+
+    .catalog__item:nth-of-type(1) img:nth-of-type(1)
+        width: 250px
+
+    .catalog__item:nth-child(2) img
+        width: 200px
+
+// Вертикальный тлф
+
+@media (max-width: 575px)
+
+    .container
+        width: 100%
+
+    html
+        font-size: 40%
