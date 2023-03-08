@@ -328,7 +328,8 @@ section {
 }
 
 .catalog img {
-  margin: 0 auto;
+  margin: 1rem auto;
+  object-fit: cover;
 }
 
 .catalog__btn {
@@ -762,12 +763,12 @@ section {
   .catalog__cards {
     gap: 1rem;
   }
-  .catalog img {
-    margin: 4rem auto 2rem;
+  .catalog__item img {
+    width: 200px;
+    margin: 3rem auto;
   }
   .catalog__item:nth-of-type(1) img:nth-of-type(1) {
-    width: 300px;
-    margin-top: 16rem;
+    width: 400px;
   }
   .reviews {
     margin-bottom: 6rem;
@@ -807,22 +808,151 @@ section {
   .phone {
     width: 10%;
   }
-  .catalog img {
-    margin: 8rem auto 2rem;
+  .catalog__item img {
+    margin: 4rem auto;
   }
   .catalog__item:nth-of-type(1) img:nth-of-type(1) {
-    width: 250px;
+    width: 300px;
+    margin-top: 11rem;
   }
-  .catalog__item:nth-child(2) img {
-    width: 200px;
+  .advantages img {
+    width: 300px;
+  }
+  iframe {
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media (max-width: 575px) {
   .container {
     width: 100%;
+    padding: 0 2rem;
   }
   html {
     font-size: 40%;
+  }
+  body {
+    position: relative;
+    background: #FBEBEA;
+  }
+  body:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(../img/cake-photo.png);
+    background-repeat: no-repeat;
+    background-position: right 96px;
+    background-size: 21rem;
+  }
+  main {
+    padding-top: 15rem;
+  }
+  .main-nav {
+    justify-content: space-evenly;
+  }
+  .navigation {
+    width: 60%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .navigation__item {
+    margin: 0 5px;
+  }
+  .promo {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .promo__cake {
+    width: 15rem;
+    top: 17px;
+    display: none;
+  }
+  .promo__item {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .promo__icon {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .promo__button {
+    margin-bottom: 7rem;
+  }
+  .catalog {
+    margin-bottom: 6rem;
+  }
+  .catalog__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .catalog__item img {
+    margin: 0 auto;
+  }
+  .catalog__item:nth-of-type(1) img:nth-of-type(1) {
+    width: 200px;
+    margin-top: 0;
+  }
+  .reviews {
+    margin-bottom: 3rem;
+  }
+  .slider {
+    height: 45rem;
+  }
+  .advantages {
+    margin-bottom: 55rem;
+  }
+  .advantages img {
+    width: 150px;
+  }
+  .advantages__part_down {
+    top: 42rem;
+    right: -15px;
+  }
+  .advantages__part_up {
+    background: #FBEBEA;
+  }
+  .contacts {
+    margin-bottom: 5rem;
+  }
+  .contacts__flex {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .contacts__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contacts__item {
+    flex-grow: 1;
+    margin-right: 7px;
+    text-align: center;
+  }
+  .social__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  iframe {
+    width: 100%;
+    height: 150px;
+  }
+  .main-footer .container {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main-footer__navigation {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
